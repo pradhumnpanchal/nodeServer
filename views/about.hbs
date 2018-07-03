@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+</head>
+
+<body>
+  {{> header}}
+  <section style="width: 75%; margin: auto">
+    <h2 style="text-align: center">{{topic}}</h2>
+    {{#each members}}
+    <ul style="display: inline-block; padding: 20px">
+      <li>First name:
+        <b>
+          <u>{{{name}}}</u>
+        </b>
+      </li>
+      <li>Last name: {{../lastName}}</li>
+      <li>age: {{age}}
+        <i>{{ageStatus age}}</i>
+      </li>
+    </ul>
+    {{/each}}
+  </section>
+  {{> footer}}
+</body>
+
+</html>
