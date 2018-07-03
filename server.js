@@ -4,6 +4,8 @@ const fs = require('fs');
 
 const content = require('./aboutContent');
 
+const port = process.env.PORT || 3000;
+
 let app = express();
 
 app.set('view engine', 'hbs');
@@ -57,6 +59,6 @@ app.get('/bad', (request, response) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('The server is up and running');
+app.listen(port, () => {
+  console.log(`The server is up and running at port: ${port}`);
 });
