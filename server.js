@@ -32,6 +32,7 @@ app.use((req, res, next) => {
   console.log(log);
   next()
 });
+
 // app.use((req, res, next) => {
 //   res.render('maintenance.hbs', {
 //     title: 'Maintenance'
@@ -56,6 +57,17 @@ app.get('/about', (request, response) => {
 app.get('/bad', (request, response) => {
   response.send({
     errorMessage: 'Unable to manage request'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    title: 'Projects Page',
+    projects: [
+      'Notes CLI App',
+      'Weather CLI App',
+      'NodeServer Web App'
+    ]
   });
 });
 
