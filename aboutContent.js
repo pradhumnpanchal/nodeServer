@@ -1,4 +1,4 @@
-const content = {
+const Content = {
   title: 'About Page',
   topic: 'Family List',
   lastName: 'Handa',
@@ -17,4 +17,4 @@ const content = {
   }]
 };
 
-module.exports = content;
+module.exports = Content;
